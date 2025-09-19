@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Consulta';
+    src: url('../fontes/Consultant.woff2') format('woff2'),
+         url('../fontes/Consultant.woff') format('woff'),
+         url('../fontes/Consultant.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cor0: #BDBCB8;
+    --cor01: #F2E2CE;
+    --cor02: #9F856C;
+    --cor03: #717856;
+    --cor04: #999DA8;
+    --cor05: #557373;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android: 'Consulta', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-color: var(--cor04);
+    padding: 15px 20px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+}
+
+header > p {
+    color: white;
+}
+
+nav {
+    background-color: var(--cor05);
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-android);
+    color: var(--cor05);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--cor05);
+    color: white;
+    padding: 15px 20px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
