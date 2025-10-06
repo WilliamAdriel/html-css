@@ -1,13 +1,24 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 html, body {
     min-height: 100vh;
-    background-color:darkgray
+    background-color: darkgray;
+    font-family: var(--fonte1);
 }
 
 header {
@@ -19,6 +30,8 @@ header {
 header > h1 {
     padding: 10px;
     font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vh;
 }
 
 header > p {
@@ -29,7 +42,7 @@ header > p {
 header a, footer a {
     color: white;
     text-decoration: none;
-    font-weight: bolder
+    font-weight: bolder;
 }
 
 header a:hover, footer a:hover {
@@ -40,26 +53,50 @@ section {
     padding-top: 10vh;
     padding-bottom: 10vh;
     line-height: 2em;
-    padding-left: 30px;
+    padding-left: 8vw;
+    /* aplica a fonte 3 como base para tudo dentro da section */
+    font-family: var(--fonte3);
+    text-align: left;
+    font-size: 3.5vh;
 }
 
+/* Mantém o fundo branco nas seções "normais" */
 section.normal {
     background-color: white;
     color: black;
 }
 
+/* Seção escura */
 section.imagem {
     background-color: rgb(44, 42, 42);
     color: white;
 }
 
+/* Garanta que os <pre> USEM a fonte 3 (sobrescreve o monospace padrão do navegador)
+   e que sejam responsivos */
+section pre {
+    font-family: var(--fonte3);     /* <--- correção essencial */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: fit-content;
+    margin: 0;
+    background-color: transparent; /* padrão, pode ser sobrescrito */
+    padding: 0;
+}
+
+/* Ajuste específico para pre dentro de .imagem (mantém cor de fundo escura) */
 section.imagem pre {
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.397);
     color: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+    
+}
+
+/* Opcional: estilo para pre dentro de seção normal (se quiser fundo branco destacado) */
+section.normal pre {
+    background-color: white;
+    color: black;
 }
 
 footer {
