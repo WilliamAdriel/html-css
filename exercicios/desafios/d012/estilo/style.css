@@ -21,6 +21,7 @@ html, body {
     font-family: var(--fonte1);
 }
 
+/* Header */
 header {
     background-color: black;
     color: white;
@@ -49,56 +50,74 @@ header a:hover, footer a:hover {
     text-decoration: underline;
 }
 
+/* Seções gerais */
 section {
     padding-top: 10vh;
     padding-bottom: 10vh;
     line-height: 2em;
-    padding-left: 8vw;
-    /* aplica a fonte 3 como base para tudo dentro da section */
+    padding-left: 2vw;
     font-family: var(--fonte3);
     text-align: left;
     font-size: 3.5vh;
 }
 
-/* Mantém o fundo branco nas seções "normais" */
+section > p {
+    padding-bottom: 2em;
+}
+
+/* Seções normais */
 section.normal {
     background-color: white;
     color: black;
 }
 
-/* Seção escura */
-section.imagem {
-    background-color: rgb(44, 42, 42);
+/* Seções de imagem/parallax */
+section.imagem, section#img01, section#img02 {
+    background-color: rgba(44, 42, 42, 0.507);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.452);
+    background-attachment: fixed; /* ativa parallax */
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh; /* garante que ocupe toda a tela */
 }
 
-/* Garanta que os <pre> USEM a fonte 3 (sobrescreve o monospace padrão do navegador)
-   e que sejam responsivos */
+/* Específicos para cada imagem */
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+}
+
+/* Estilo para pre */
 section pre {
-    font-family: var(--fonte3);     /* <--- correção essencial */
+    font-family: var(--fonte3);
     white-space: pre-wrap;
     word-wrap: break-word;
     width: fit-content;
     margin: 0;
-    background-color: transparent; /* padrão, pode ser sobrescrito */
+    background-color: transparent;
     padding: 0;
 }
 
-/* Ajuste específico para pre dentro de .imagem (mantém cor de fundo escura) */
-section.imagem pre {
+section.imagem pre, section#img01 pre, section#img02 pre {
     display: inline-block;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.397);
+    background-color: rgba(0, 0, 0, 0.445);
     color: white;
-    
+    text-shadow: 1px 1px 0px black;
 }
 
-/* Opcional: estilo para pre dentro de seção normal (se quiser fundo branco destacado) */
+
 section.normal pre {
     background-color: white;
     color: black;
 }
 
+/* Footer */
 footer {
     background-color: black;
     color: white;
