@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de tabelas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px; 
+        }
+
+        .destaque {
+            background-color: #56e007;
+        }
+
+        col.cnome {
+            background-color: #56e007;
+        }
+
+        col.csexo {
+            background-color: #f9f871;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercício de tabelas</h1>
+
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>Feminino</td>
+            <td>26</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>João Pedro</td>
+            <td>Masculino</td>
+            <td>34</td>
+            <td>Engenheiro</td>
+        </tr>
+        <tr>
+            <td>Carla Souza</td>
+            <td>Feminino</td>
+            <td>29</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Lucas Lima</td>
+            <td>Masculino</td>
+            <td>41</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Mariana Alves</td>
+            <td>Feminino</td>
+            <td>22</td>
+            <td>Designer</td>
+        </tr>
+        <tr>
+            <td>Rafael Costa</td>
+            <td>Masculino</td>
+            <td>37</td>
+            <td>Advogado</td>
+        </tr>
+    </table>
+</body>
+</html>
