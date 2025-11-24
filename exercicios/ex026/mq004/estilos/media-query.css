@@ -46,7 +46,7 @@ TV 1200px ou mais
 
     img#phone { display: none;}
     img#tablet { display: block;}
-    img#print { display: block;}
+    img#print { display: none;}
     img#pc { display: none;}
     img#tv { display: none;}
    
