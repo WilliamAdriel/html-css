@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* Smartphones até 767px */
+@media only screen and (max-width: 767px) {
+
+    /* Menu começa escondido — só aparece ao clicar */
+    menu {
+        display: none;
+    }
+
+    main {
+        width: 90vw;
+    }
+}
+
+/* Telas grandes (acima de 768px) */
+@media only screen and (min-width: 768px) {
+    /* Mostra o menu */
+    menu {
+        display: block;
+    }
+
+    /* Oculta o botão menu */
+    span.material-symbols-outlined {
+        display: none;
+    }
+
+    main {
+        width: 768px;
+    }
+}

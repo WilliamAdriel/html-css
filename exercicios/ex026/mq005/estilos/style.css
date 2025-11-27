@@ -2,12 +2,11 @@
 
 * {
     font-family: Arial, Helvetica, sans-serif;
-
     margin: 0;
     padding: 0;
 }
 
-body html{
+body, html {
     background-color: lightcyan;
 }
 
@@ -34,12 +33,24 @@ span.material-symbols-outlined:hover {
     color: black;
 }
 
+/* Menu inicialmente oculto nas telas pequenas (controlado pelo JS) */
 menu {
     display: none;
 }
 
+/* Remove a lista padrão */
 menu > ul {
     list-style-type: none;
+
+    /* Torna os itens lado a lado */
+    display: flex;
+    justify-content: center; /* centraliza */
+    align-items: center;
+    flex-wrap: wrap; /* evita quebrar layout em telas menores */
+}
+
+menu > ul > li {
+    margin: 0 10px; /* espaçamento horizontal */
 }
 
 menu > ul > li > a {
@@ -49,7 +60,7 @@ menu > ul > li > a {
     text-align: center;
     background-color: rgb(61, 60, 60);
     color: white;
-    border-top: 2px solid rgba(128, 128, 128, 0.856);
+    border-radius: 5px; /* opcional, apenas fica mais bonito */
 }
 
 menu > ul > li > a:hover {
@@ -58,7 +69,7 @@ menu > ul > li > a:hover {
 
 main {
     width: 90vw;
-    background-color: rgb(150, 142, 142);
+    background-color: rgb(230, 225, 225);
     margin: auto;
     margin-top: 10px;
     padding: 10px;
