@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d1dbb, #2f7bff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   GRID CONTAINER (DESKTOP)
+========================= */
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 1fr 150px;
+  grid-template-rows: 80px 40px 1fe 40px;
+
+  grid-template-areas:
+    "topo topo topo"
+    "menu menu menu"
+    "principal principal secundario"
+    "rodape rodape rodape";
+
+  gap: 12px;
+}
+
+/* =========================
+   GRID ITEMS
+========================= */
+.topo {
+  grid-area: topo;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.principal {
+  grid-area: principal;
+}
+
+.secundario {
+  grid-area: secundario;
+}
+
+.rodape {
+  grid-area: rodape;
+}
+
+/* =========================
+   VISUAL
+========================= */
+.container > * {
+  background-color: #cfa552;
+  border: 3px dashed white;
+  color: #1d1dbb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "topo topo"
+      "menu menu"
+      "principal principal"
+      "secundario secundario"
+      "rodape rodape";
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "topo"
+      "menu"
+      "principal"
+      "secundario"
+      "rodape";
+  }
+
+  .container > * {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
